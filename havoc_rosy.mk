@@ -22,11 +22,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/rosy/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := rosy
-PRODUCT_NAME := lineage_rosy
+PRODUCT_NAME := havoc_rosy
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 5
 PRODUCT_MANUFACTURER := Xiaomi
@@ -34,6 +34,12 @@ TARGET_VENDOR := Xiaomi
 BOARD_VENDOR := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+export export 
+HAVOC_BUILD_TYPE=Official
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.havoc.maintainer=Sukrut4778
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="rosy-user 7.1.2 N2G47H V9.2.3.0.NDAMIEK release-keys"
