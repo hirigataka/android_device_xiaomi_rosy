@@ -345,7 +345,7 @@ function configure_zram_parameters() {
 
     RamSizeGB=`echo "($MemTotal / 1048576 ) + 1" | bc`
     zRamSizeBytes=`echo "$RamSizeGB * 1024 * 1024 * 1024 / 2" | bc`
-    if [ $zRamSizeBytes -gt 4294967296 ]; then
+    if [ $RamSizeGB -gt 4 ]; then
         zRamSizeBytes=4294967296
     fi
 
@@ -5438,7 +5438,7 @@ case "$target" in
         start mpdecision
         echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
     ;;
-    "msm8909" | "msm8916" | "msm8937" | "msm8952" | "msm8953" | "msm8994" | "msm8992" | "msm8996" | "msm8998" | "sdm660" | "apq8098_latv" | "sdm845" | "sdm710" | "msmnile" | | "sdmshrike" |"msmsteppe" | "sm6150" | "kona" | "lito" | "trinket" | "atoll" | "bengal" )
+    "msm8909" | "msm8916" | "msm8937" | "msm8952" | "msm8953" | "msm8994" | "msm8992" | "msm8996" | "msm8998" | "sdm660" | "apq8098_latv" | "sdm845" | "sdm710" | "msmnile" | "sdmshrike" |"msmsteppe" | "sm6150" | "kona" | "lito" | "trinket" | "atoll" | "bengal" )
         setprop vendor.post_boot.parsed 1
     ;;
     "apq8084")
