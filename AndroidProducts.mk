@@ -17,5 +17,5 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/du_rosy.mk
 
 COMMON_LUNCH_CHOICES := \
-	du_rosy-userdebug
+	du_rosy-userdebug \
 	du_rosy-eng
