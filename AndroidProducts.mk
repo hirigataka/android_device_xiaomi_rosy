@@ -14,4 +14,8 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_rosy.mk
+    $(LOCAL_DIR)/du_rosy.mk
+
+COMMON_LUNCH_CHOICES := \
+	du_rosy-userdebug
+	du_rosy-eng

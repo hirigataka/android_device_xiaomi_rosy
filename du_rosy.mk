@@ -21,12 +21,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from rosy device
 $(call inherit-product, device/xiaomi/rosy/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common DirtyUnicorn stuff.
+$(call inherit-product, vendor/du/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := rosy
-PRODUCT_NAME := lineage_rosy
+PRODUCT_NAME := du_rosy
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 5
 PRODUCT_MANUFACTURER := Xiaomi
